@@ -5,8 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title>
+      <%= htmlWebpackPlugin.options.title %>
+    </title>
+    <!-- font-family -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap" rel="stylesheet" /> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC" rel="stylesheet" /> -->
+    <!-- <link href="https://fonts.font.im/css?family=Noto+Sans" rel="stylesheet" /> -->
+    <!-- font-icon -->
+    <!-- <link href="//at.alicdn.com/t/font_2708451_b2m4mmfwad.css" rel="stylesheet" /> -->
+    <link href="icon/iconfont.css" rel="stylesheet" />
+    <!-- <script src="//at.alicdn.com/t/font_2708451_b2m4mmfwad.js" type="text/javascript"></l> -->
   </head>
+
   <body>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
@@ -14,4 +25,51 @@
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
+
+  <style>
+    *,
+    ::before,
+    ::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .icon {
+      width: 1em;
+      height: 1em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+    }
+
+    @font-face {
+      font-family: "CJK";
+      src: url("../src/assets/font/NotoSansCJK-Medium.otf");
+    }
+
+    /* [class^="sans-"] {
+      font-family: 'Noto Sans', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    [class^="sc-sans-"] {
+      font-family: 'Noto Sans SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    [class^="k-sans-"] {
+      font-family: 'CJK';
+    }
+
+    [class^="source-sans-"] {
+      font-family: 'Source Han Sans';
+    } */
+  </style>
+
+  
 </html>
+
+
