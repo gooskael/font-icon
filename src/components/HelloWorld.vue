@@ -104,15 +104,15 @@ export default {
       // })
       // console.log(data);
 
-      const url = '/mock/mocksomething';
-      this.$axios.get(url).then((res) => {
-        console.log(res, 'check res');
-      }).catch((res) => {
-        console.log('wrong!');
-      })
+      // const url = '/mock/mocksomething';
+      // this.$axios.get(url).then((res) => {
+      //   console.log(res, 'check res');
+      // }).catch((res) => {
+      //   console.log('wrong!');
+      // })
 
       // debounce & throttle check
-      // console.log(new Date());
+      console.log(new Date());
     }
   }
 }
