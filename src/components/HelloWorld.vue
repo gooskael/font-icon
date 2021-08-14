@@ -2,15 +2,15 @@
   <div>
     <!-- iconfont -->
     <!-- <i class="iconfont icon-dianzan"></i> -->
-    <span class="iconfont icon-dianzan size-change"></span>
-    <i class="iconfont icon-icon-test"></i>
+    <!-- <span class="iconfont icon-dianzan size-change"></span>
+    <i class="iconfont icon-icon-test"></i> -->
     <!-- <i class="iconfont icon-iconfonticon-baobia"></i> -->
     <!-- <svg class="icon" aria-hidden="true">
       <use xlink:href="#icon-dianzan_huaban1"></use>
     </svg> -->
 
     <!-- font-family -->
-    <h1 class="sans-font"> {{ msg }} </h1>
+    <!-- <h1 class="sans-font"> {{ msg }} </h1>
     <h1 class="sc-sans-font"> {{ msg }} </h1>
     <h1 class="k-sans-font"> {{ msg }} </h1>
     <h1>{{ msg }}</h1>
@@ -45,9 +45,9 @@
     </p>
     <p>
       这里尝试打一些中文的字体 完美氪电子科技&frac34;
-    </p>
+    </p> -->
 
-    <button @click="testBreak">click</button>
+    <button @click="emitBus">click</button>
   </div>
 </template>
 
@@ -55,8 +55,10 @@
 // import debounce from 'lodash/debounce';
 // import throttle from 'lodash/throttle';
 // import axios from "axios"
+import EventBus from '../utils/bus.js';
 export default {
   name: 'HelloWorld',
+  inject: ['parentData'],
   props: {
     msg: String
   },
@@ -167,6 +169,15 @@ export default {
       //     console.log(`i: ${i}; j: ${j}`);
       //   }
       // }
+    },
+
+    getParent() {
+      console.log(this.$parent);
+    },
+
+    emitBus() {
+      console.log(this.parentData);
+      EventBus.$emit('emitBus', 'this emit a method');
     }
   }
 }
