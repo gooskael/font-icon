@@ -47,7 +47,7 @@
       这里尝试打一些中文的字体 完美氪电子科技&frac34;
     </p>
 
-    <button @click="selecteP">click</button>
+    <button @click="checkAsync">click</button>
   </div>
 </template>
 
@@ -62,7 +62,7 @@ export default {
   },
   data() {
     // this.selecteP = debounce(this.selecteP, 1000, { leading: true, trailing: true });
-    this.selecteP = throttle(this.selecteP, 1000, { leading: true, trailing: true });
+    // this.selecteP = throttle(this.selecteP, 1000, { leading: true, trailing: true });
     return {
 
     }
@@ -113,7 +113,23 @@ export default {
 
       // debounce & throttle check
       console.log(new Date());
-    }
+    },
+
+    async check1() {
+      throw new Error('err');
+      // return 'hey!';
+    },
+
+    async checkAsync() {
+      let result = 'default';
+      try {
+        const result = await this.check1();
+      } catch {
+        console.log(result, 'check await value-type');
+      }
+    },
+
+    
   }
 }
 </script>
