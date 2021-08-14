@@ -47,7 +47,7 @@
       这里尝试打一些中文的字体 完美氪电子科技&frac34;
     </p>
 
-    <button @click="checkAsync">click</button>
+    <button @click="testBreak">click</button>
   </div>
 </template>
 
@@ -64,7 +64,7 @@ export default {
     // this.selecteP = debounce(this.selecteP, 1000, { leading: true, trailing: true });
     // this.selecteP = throttle(this.selecteP, 1000, { leading: true, trailing: true });
     return {
-
+      sonTitle: 'this is son title',
     }
   },
   methods: {
@@ -129,7 +129,45 @@ export default {
       }
     },
 
-    
+    testBreak() {
+      const arr = [1, 2, 3, 4];
+
+      // forEach
+      // arr.forEach((el) => {
+      //   console.log(`before each ${el}`);
+      //   if(el > 2) {
+      //     return ;
+      //   }
+      //   console.log(`after each ${el}!!`);
+      // })
+
+      // map
+      // arr.map(async (el) => {
+      //   let value = await this.check1().catch(() => {
+      //     value = undefined;
+      //   });
+      //   if(value === undefined) return;
+      //   // 下面处理非failed的正常行为
+      //   console.log(`after map ${el}!!!!`);
+      // })
+
+      // switch如果不使用break会继续往前找符合条件的case
+      // let num = 25;
+      // switch(num) {
+      //   case 25:
+      //     console.log(`check ${num}`);
+      //   default:
+      //     console.log(`default!`);
+      // }
+
+      // `break` 只会结束一层for，不会结束外层嵌套的for
+      // for(let i = 0; i < 3; i++) {
+      //   for(let j = 0; j < 3; j++) {
+      //     if(j > 2) break;
+      //     console.log(`i: ${i}; j: ${j}`);
+      //   }
+      // }
+    }
   }
 }
 </script>
