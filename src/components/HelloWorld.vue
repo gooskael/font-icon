@@ -47,7 +47,8 @@
       这里尝试打一些中文的字体 完美氪电子科技&frac34;
     </p> -->
 
-    <button @click="emitBus">click</button>
+    <button @click="confirmFunc">click</button>
+    <button>version 1</button>
   </div>
 </template>
 
@@ -178,6 +179,12 @@ export default {
     emitBus() {
       console.log(this.parentData);
       EventBus.$emit('emitBus', 'this emit a method');
+    },
+
+    confirmFunc() {
+      this.$confirm({
+        title: '确定',
+      })
     }
   }
 }
