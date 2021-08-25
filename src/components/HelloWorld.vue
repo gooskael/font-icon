@@ -49,6 +49,7 @@
 
     <button @click="confirmFunc">click</button>
     <button>version 1</button>
+    <button>version 2</button>
   </div>
 </template>
 
