@@ -50,6 +50,7 @@
     <button @click="confirmFunc">click</button>
     <button>version 1</button>
     <button>version 2</button>
+    <button>version 3</button>
   </div>
 </template>
 
